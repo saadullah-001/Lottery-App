@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:lottery_app/functions.dart';
 import 'body.dart';
 import 'widgets.dart';
 import 'dart:math';
 
 var random1 = Random();
 var random2 = Random();
-  var num = 5;
-var newnum = 0;
+int n = 5;
+int newnum = 0;
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -17,7 +16,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   callback() {
     func();
     setState(() {});
@@ -32,4 +30,9 @@ class _MyAppState extends State<MyApp> {
       floatingActionButton: myActionButton(callback),
     ));
   }
+}
+
+void func() {
+  newnum = random1.nextInt(11);
+  n = random2.nextInt(11);
 }
